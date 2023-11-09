@@ -1,0 +1,51 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-size: 16px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    height: 100vh;
+    /* border: 1px olive solid; */
+    display: grid;
+    place-items: center;
+    background-color: black;
+}
+
+.container{
+   position: relative;
+   height: 50px;
+}
+
+input{
+    border: 0;
+    height: 50px;
+    width: 50px;
+    transition: width 0.3s ease;
+    font-size: 1.1rem;
+    padding: 15px;
+    background-color: aliceblue;
+}
+
+.btn{
+    transition: transform 0.3s ease;
+    border: 0;
+    font-size: 2rem;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+}
+.btn:focus,
+input:focus{
+    outline: none;
+}
+.container.active input{
+  width: 200px;
+}
+
+.container.active .btn {
+    transform: translateX(198px);
+  }
